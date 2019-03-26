@@ -1,0 +1,87 @@
+
+#typeofevent {
+    width:250px;
+    display:inline-block;
+}
+.navbar{
+   left:10px;
+}
+
+.typeofevent{
+   display: inline-block;    
+}
+.date{
+   display: inline-block;
+}
+.row {
+   display: flex;;
+   position: absolute;
+   top:50%;
+ }
+ 
+ .column {
+   flex: 33.33%;
+   padding: 45px;
+ }
+.column img{
+   height:250px;
+   margin-left:15%;
+}
+
+.image {
+    background-size: auto;
+    background-image: url("../ticketfiend/assets/images/concert2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2%;
+    box-shadow: 0px 10px 5px rgb(17, 17, 17);
+    margin:0%;
+    /* text-align: center; */
+    height: static;
+    width: 100%;
+    /* position: absolute; */
+ }
+ 
+ #text {
+     animation: mymove 1s ;
+     animation-timing-function: ease-out;
+     position: relative;
+     animation-fill-mode: forwards;
+     text-shadow: 4px 4px 10px #252424;
+     font-family: serif;
+     font-size: 150% 
+ }
+ 
+ .navbar {
+     animation: mymove 1s ;
+     animation-timing-function: ease-out;
+     position: relative;
+     animation-fill-mode: forwards;
+     
+     padding: 20px;
+     overflow: hidden;  
+ }
+ 
+ @keyframes mymove {
+     from {top: -150px;}
+     to {top: 0px;}
+   }
+   
+ #animation img {
+     display: none;
+ }
+ #animation img:first-child {
+     display: none;
+ }
+ #Bdy{
+     width: 100%;
+     height: 100%;
+     background-repeat: repeat-y repeat-x;
+     background-color: rgb(49, 47, 47);
+ }
+#uberlink{
+    max-height:25px;
+}
+#lyftlink{
+    max-height:25px;
+}
