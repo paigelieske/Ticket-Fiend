@@ -1,0 +1,143 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    color:rgba(212, 114, 22, 0.931);
+    text-shadow: 4px 4px 10px #641b09;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-spacing: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+td {
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 25%;
+        text-align: center;
+    }
+  }
+
+tr {
+    :nth-child(even) {
+        background-color: #dddddd;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgb(219, 152, 97);
+      }
+  }
+
+h2{
+    text-align: center;
+    color:rgb(250, 248, 245);
+    text-shadow: 4px 4px 10px #252424;
+    text-shadow: 4px 4px 10px #641b09;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image {
+    background-size: auto;
+    background-image: url("../images/concert2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2%;
+    box-shadow: 0px 10px 5px rgb(17, 17, 17);
+    margin:0%;
+    /* text-align: center; */
+    height: static;
+    width: 100%;
+    /* position: absolute; */
+ }
+
+.tableheaders {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.firstrow {
+    background-color: rgb(219, 152, 97);
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    animation: mymove 1s ;
+    animation-timing-function: ease-out;
+    position: relative;
+    animation-fill-mode: forwards;
+    padding: 20px;
+    overflow: hidden;    
+}
+
+.navbar2{
+    left:10px;
+ }
+ 
+.typeofevent{
+    display: inline-block;    
+ }
+
+.date{
+    display: inline-block;
+ }
+
+.row {
+    display: flex;;
+    position: absolute;
+    top:50%;
+  }
+ 
+.column {
+    flex: 33.33%;
+    padding: 45px;
+    img {
+        height: 250px;
+        margin-left: 15%;
+    }
+}
+
+#text {
+    animation: mymove 1s ;
+    animation-timing-function: ease-out;
+    position: relative;
+    animation-fill-mode: forwards;
+    text-shadow: 4px 4px 10px #252424;
+    font-family: serif;
+    font-size: 150%
+ }
+
+ #animantion {
+    img {
+      display: none;
+      :first-child {
+          display: none; 
+      }
+    }
+}
+
+#Bdy{
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-y repeat-x;
+    background-color: rgb(49, 47, 47);
+    padding-block-end: 20%
+   
+}
+
+#follow {
+    color: white;
+}
+ 
+#typeofevent {
+    width:250px;
+    display:inline-block;
+}
+
+ @keyframes mymove {
+    from {top: -150px;}
+    to {top: 0px;}
+  }
