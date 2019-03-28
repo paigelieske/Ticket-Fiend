@@ -46,7 +46,7 @@ h2 {
   margin: 0%;
   /* text-align: center; */
   height: static;
-  width: 100%;
+  max-width: 100%;
   /* position: absolute; */
 }
 
@@ -90,7 +90,7 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 70%;
 }
 
 .column {
@@ -159,6 +159,80 @@ h2 {
   }
   to {
     top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .column {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+    padding: 45px;
+  }
+  .column img {
+    height: 250px;
+    margin-left: 1%;
+  }
+  #text {
+    -webkit-animation: mymove 1s;
+            animation: mymove 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: relative;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    text-shadow: 4px 4px 10px #252424;
+    font-family: serif;
+    font-size: 150% margin-left 3%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .column {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+    padding: 45px;
+  }
+  .column img {
+    height: 150px;
+    margin-left: 1%;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  #text {
+    -webkit-animation: mymove 1s;
+            animation: mymove 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: relative;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    text-shadow: 4px 4px 10px #252424;
+    font-family: serif;
+    font-size: 100%;
+  }
+  #text img {
+    max-height: 25px;
+    max-width: 15px;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+  }
+  column {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+    padding: 25px;
+  }
+  column img {
+    height: 100px;
+    margin-left: 1%;
   }
 }
 /*# sourceMappingURL=fiend.css.map */
