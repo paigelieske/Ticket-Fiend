@@ -1,14 +1,14 @@
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 50%;
-  color: rgba(212, 114, 22, 0.931);
-  text-shadow: 4px 4px 10px #641b09;
-  border: 2px solid black;
-  border-collapse: collapse;
-  border-spacing: 25px;
+  width: 80%;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+td {
+  width: 20%;
+  padding: 0 5% 0 5%;
+  border: 1pt solid black;
 }
 
 td th {
@@ -71,9 +71,6 @@ h2 {
           animation-fill-mode: forwards;
   padding: 20px;
   overflow: hidden;
-}
-
-.navbar2 {
   left: 10px;
 }
 
@@ -89,7 +86,6 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   top: 70%;
 }
 
@@ -142,6 +138,14 @@ h2 {
 #typeofevent {
   width: 250px;
   display: inline-block;
+}
+
+#uberlink {
+  max-height: 25px;
+}
+
+#lyft {
+  max-height: 25px;
 }
 
 @-webkit-keyframes mymove {
