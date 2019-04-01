@@ -101,6 +101,22 @@ h2 {
   margin-left: 15%;
 }
 
+.imgtext {
+  position: relative;
+  top: -50px;
+  color: #dddddd;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.modal {
+  z-index: 1;
+  width: 15%;
+  background-color: #db9861;
+  margin-left: 10px;
+  border: lightgray 1px solid;
+}
+
 #text {
   -webkit-animation: mymove 1s;
           animation: mymove 1s;
@@ -146,6 +162,25 @@ h2 {
 
 #lyft {
   max-height: 25px;
+}
+
+#instructions {
+  font-weight: bolder;
+  font-family: serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+#zipInput {
+  margin-left: 15px;
+  background-color: lightgray;
+  color: #dddddd;
+}
+
+#zipClick {
+  margin-left: 18px;
+  background-color: lightgray;
+  color: black;
 }
 
 @-webkit-keyframes mymove {
