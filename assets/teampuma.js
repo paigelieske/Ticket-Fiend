@@ -1,3 +1,5 @@
+'use strict'
+
 function mainSearch(){
     
     $("#results").empty();
@@ -49,8 +51,11 @@ function mainSearch(){
             var whenValidation = moment(when).format("MM-DD-YYYY");
             console.log(whenValidation);
 
-            var ticketLink = $("<a>").text("Visit SeatGeek to View");
-            ticketLink.attr("href", results[i].url);
+          var ticketLink = $("<a>");
+        ticketLink.attr("href", results[i].url);
+        var ticketImage = $("<img src = seatgeek.png>");
+        ticketImage.addClass("seatgeek");
+        ticketLink.html(ticketImage);
 
             if (eventMainTitle.indexOf(eventName) > -1 && whereValidation.indexOf(eventWhere) > -1 && whenValidation.indexOf(eventWhen) > -1) {
                 // var table = $("<table>");
@@ -101,96 +106,92 @@ $("#submitbtn").on("click", function (){
     mainSearch();
 });
 
-$(".localEvents").on("click", function (evt) {
+$(".localEvents").on("click", function () {
     
-    evt.preventDefault();
 
     var eventType = $(this).val("value");
     eventType = eventType[0].id;
     console.log(eventType);
 
+    $(".modal").show();
+
+    $("#zipClick").on("click", function (e) {
+
+        e.preventDefault()
+        var zip = $("#zipInput").val().trim();
+        console.log(zip);
+        
     $("#results").empty();
 
     var eventWhere = $("#city").val().trim();
     console.log(eventWhere);
 
-    var musicURL = "https://api.seatgeek.com/2/events/?client_id=MTU4NDczMDN8MTU1MzEyNzc0Ny42OA&client_secret=dda067dbe95284017c0a01a3ef629be429e1fb11f9a8317ad3a8ea50ac4f6e58&taxonomies.name=" + eventType + "&geoip=" + eventWhere + "&range=15mi&per_page=25";
+    var musicURL = "https://api.seatgeek.com/2/events/?client_id=MTU4NDczMDN8MTU1MzEyNzc0Ny42OA&client_secret=dda067dbe95284017c0a01a3ef629be429e1fb11f9a8317ad3a8ea50ac4f6e58&taxonomies.name=" + eventType + "&geoip=" + zip + "&range=20mi&per_page=25";
 
-    $.ajax({
-        url: musicURL,
-        method: "GET"
-    }).then(function (response) {
+        $.ajax({
+            url: musicURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log("it worked");
 
-        console.log(response);
-        $('#results').html('<tbody></tbody>');
-        var results = response.events;
-    
-        for (var i = 0; i < results.length; i++) {
+            console.log(response);
+            $('#results').html('<tbody></tbody>');
+            var results = response.events;
 
-            var eventMainTitle = results[i].title;
-            eventMainTitle = eventMainTitle.toLowerCase();
+            for (var i = 0; i < results.length; i++) {
 
-            var eventShortTitle = $("<p>").text(results[i].short_title);
+                var eventMainTitle = results[i].title;
+                eventMainTitle = eventMainTitle.toLowerCase();
 
-            var where = results[i].venue.display_location;
-            
-            var when = results[i].datetime_local;
-            when = moment(when).format("MM-DD-YYYY @ h:mm A");
-            
-            
-            var whenFuture = moment().add(7, "days");
-            whenFuture = moment(whenFuture).format("MM-DD-YYYY");
-            console.log(whenFuture);
+                var eventShortTitle = $("<p>").text(results[i].short_title);
 
-            var ticketLink = $("<a>").text("Visit SeatGeek to View");
-            ticketLink.attr("href", results[i].url);
-           
-            if (results.length > 0 && whenFuture > when) {
-                var newRow = $("<tr>").append(
-                    $("<td>").append(eventShortTitle),
-                    $("<td>").append(where),
-                    $("<td>").append(when),
-                    $("<td>").append(ticketLink)
-                )
-                
-                $('#results tbody').append(newRow);
-                clearInterval(window.animate);
-                $("#bdy").css("background", "#fff")
+                var where = results[i].venue.display_location;
+
+                var when = results[i].datetime_local;
+                when = moment(when).format("MM-DD-YYYY @ h:mm A");
+
+
+                var whenFuture = moment().add(7, "days");
+                whenFuture = moment(whenFuture).format("MM-DD-YYYY");
+                console.log(whenFuture);
+
+                var ticketLink = $("<a>");
+                ticketLink.attr("href", results[i].url);
+                var ticketImage = $("<img src = seatgeek.png>");
+                ticketImage.addClass("seatgeek");
+                ticketLink.html(ticketImage);
+
+
+                if (results.length > 0 && whenFuture > when) {
+                    var newRow = $("<tr>").append(
+                        $("<td>").append(eventShortTitle),
+                        $("<td>").append(where),
+                        $("<td>").append(when),
+                        $("<td>").append(ticketLink)
+                    )
+
+                    $('#results tbody').append(newRow);
+                    $(".modal").hide();
+                    $('html').scrollTop(0);
+                }
             }
-        }
+        })
     })
-}); 
-// this is where i created a function to load my images
-var Image; 
+});
 
-onload = function createImage() {
-    // load images into this div and cycle thru 90 times
-    for (var i = 1; i < 90; i++) {
-    //    creating image in the div and loading url into it
-        Image = $("<img>");
-        url =  "assets/images/Golden_Tix_Idea/Falling_Tickets/Falling_Tickets_" + i + ".png";
-        Image.attr("src", url);
-        Image.attr("class", "animated");
-        $("#animation").append(Image);
-//    starting the animation function
-    } 
-    startAnimation();
-};
+$(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function () {
+    $("#back2Top").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 
-
-// this function cycles thru the animation and getting the children and loading it into the variable
-function startAnimation() {
-    var frames = document.getElementById("animation").children;
-    var frameCount = frames.length;
-    var i = 0;
-    // this function is taking the frames and setting each one to display at the current time in the background image of the body
-    window.animate = setInterval(function () {
-        // created a mod to start over each time it reaches the number of frames we loaded in
-        frames[i % frameCount].style.display = "none";
-        frames[++i % frameCount].style.display = "none";
-        var bgimage = frames[i % frameCount].src;
-        var UR = "url(" + bgimage + ")";
-        $('#bdy').css("background", UR); 
-        
-    }, 33.33333333333333);
-}
+});

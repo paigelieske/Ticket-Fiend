@@ -26,12 +26,12 @@
             <h1><strong>T<img src="assets/images/magnifying glass.png">CKET FIEND</strong></h1>
         </div>
         <div id="links">
-        Need a Ride? 
-        <a href="https://www.uber.com/"><img id="uberlink" src="assets/images/uberpic.png"></a>
-        <a href="https://www.lyft.com/"><img id="lyftlink" src="assets/images/lyftpic.png"></a>
-        Follow Us!
-        <a href="https://twitter.com/FiendTicket"><img id="twitter" src="assets/images/twitter.png"></a>
-        <a href="https://www.instagram.com/ticketfiend/"><img id="insta" src="assets/images/insta.jpg"></a>
+            Need a Ride?
+            <a href="https://www.uber.com/"><img id="uberlink" src="assets/images/uberpic.png"></a>
+            <a href="https://www.lyft.com/"><img id="lyftlink" src="assets/images/lyftpic.png"></a>
+            Follow Us!
+            <a href="https://twitter.com/FiendTicket"><img id="twitter" src="assets/images/twitter.png"></a>
+            <a href="https://www.instagram.com/ticketfiend/"><img id="insta" src="assets/images/insta.jpg"></a>
         </div>
         <div class="navbar">
             <input id="eventName" placeholder="Search Artists, Teams, or Events" required></input>
@@ -41,14 +41,18 @@
                 </form>
             </span>
             <span class="location">
-                <input id="city" placeholder="Enter ZIP Code"></input>
+                <input id="city" placeholder="Enter City"></input>
             </span>
             <button id="submitbtn" type="submit">Submit Search</button>
         </div>
     </div>
 
     <table id="results"></table>
-        <p id="instructions">OR...Click Pictures for Events in Your Area!</p>
+    <form action="" class="zipCode_form modal" id="zipCode" style="display:none">
+        <p><input id="zipInput" type="text" placeholder="Zip Code" style="text-align:center" /></p>
+        <p><input id="zipClick" type="submit" value="Submit" rel="modal:close" /></p>
+    </form>
+    <p id="instructions">OR...Click Pictures for Events in Your Area!</p>
     <div class="row">
         <div class="column">
             <img class="localEvents" id="concert" value="concert" src="assets/images/musicpic.jpg" alt="Concert">
@@ -61,12 +65,14 @@
         <div class="column">
             <img class="localEvents" id="theater" value="theater" src="assets/images/theaterpic.jpg" alt="Theater">
             <div class="imgtext">Performances</div>
-
         </div>
     </div>
 
     <div id="animation"></div>
 
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    <script src="assets/tickets.js"></script>
     <script src="assets/teampuma.js"></script>
 
 </body>

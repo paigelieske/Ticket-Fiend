@@ -119,6 +119,11 @@
      border: 2px solid black;
      border-collapse: collapse;
      border-spacing: 25px;
+     width:80%;
+     margin-left:auto;
+     margin-right:auto;
+     background-color:orange;
+     margin-top:25px;
    }
    
    td, th {
@@ -169,3 +174,8 @@
        font-size:40px;
        font-weight: bolder;
    }
+
+.seatgeek{
+    width:15%;
+    margin-left:40%;
+}
