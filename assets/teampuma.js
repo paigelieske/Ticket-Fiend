@@ -1,5 +1,5 @@
-$("#submitbtn").on("click", function (evt) {
-    evt.preventDefault();
+function mainSearch(){
+    
     $("#results").empty();
 
     var eventName = $("#eventName").val().trim();
@@ -87,9 +87,22 @@ $("#submitbtn").on("click", function (evt) {
     $("#eventName").val("");
     $("#date").val("");
     $("#city").val("");
+};
+
+$('body').keypress( function( e ) {
+    var code = e.keyCode || e.which;
+  
+    if( code === 13 ) {
+      e.preventDefault();
+      mainSearch();
+    }
+  })
+$("#submitbtn").on("click", function (){
+    mainSearch();
 });
 
 $(".localEvents").on("click", function (evt) {
+    
     evt.preventDefault();
 
     var eventType = $(this).val("value");
