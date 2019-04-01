@@ -9,29 +9,39 @@ $primary-font: 'Montserrat', sans-serif;
 @mixin col-display() {
     flex: 33.33%;
     padding: 45px;
+    text-align: center;
 }
 
 table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
     width: 80%;
-    margin-top: 15px;
     margin-left: auto;
-    margin-right: auto; 
-  }
-
-td {
-    width: 20%;
-    padding: 0 5% 0 5%;
-    border: 1pt solid $primary-color1;
-    th {
-        border: 1px solid $primary-color2;
-        text-align: left;
-        padding: 8px;
-        border: 1px solid $primary-color1;
-        border-collapse: collapse;
-        width: 25%;
-        text-align: center;
+    margin-right: auto;
+    color: $primary-color1;
+    border: 2px solid $primary-color1;
+    border-collapse: collapse;
+    border-spacing: 25px;
+    td {
+        th{
+            border: 1px solid $primary-color2;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid $primary-color1;
+            border-collapse: collapse;
+            width: 25%;
+            font-weight:bolder;
+            tr {
+            border: 1px solid $primary-color1;
+            border-spacing: 15px;
+            background-color: $primary-color3;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+            text-align: center;
+            }
+        }
     }
-  }
+}
 
 tr {
     :nth-child(even) {
@@ -43,7 +53,7 @@ tr {
 
 h2{
     text-align: center;
-    color:rgb(250, 248, 245);
+    color: $primary-color1;
     text-shadow: 4px 4px 10px $shadow-color;
     text-shadow: 4px 4px 10px #641b09;
     font-family: $primary-font;
@@ -57,10 +67,8 @@ h2{
     padding: 2%;
     box-shadow: 0px 10px 5px rgb(17, 17, 17);
     margin:0%;
-    /* text-align: center; */
     height: static;
     max-width: 100%;
-    /* position: absolute; */
  }
 
 .tableheaders {
@@ -80,8 +88,8 @@ h2{
     position: relative;
     animation-fill-mode: forwards;
     padding: 20px;
-    overflow: hidden;    
-    left:10px;
+    overflow: hidden;   
+    left: 10px; 
 }
  
 .typeofevent{ @include display(inline-block); }  
@@ -90,14 +98,14 @@ h2{
 
 .row {
     display: flex;
-    top:70%;
+    top:60%;
   }
  
 .column {
     @include col-display();
     img {
+        max-width: 300px;
         height: 250px;
-        margin-left: 15%;
     }
 }
 .imgtext{
@@ -116,14 +124,24 @@ h2{
     border: lightgray 1px solid;
 }
 
+.datepicker{ @include display(inline-block); }
+
+.seatgeek {
+    width: 15%;
+}
+
 #text {
     animation: mymove 1s ;
     animation-timing-function: ease-out;
-    position: relative;
     animation-fill-mode: forwards;
     text-shadow: 4px 4px 10px $shadow-color;
     font-family: serif;
-    font-size: 150%
+    font-size: 150%;
+    margin-left: 12%;
+    @include display(inline-block);
+    img {
+        height: 35px;
+    }
  }
 
  #animantion {
@@ -141,7 +159,14 @@ h2{
     background-repeat: repeat-y repeat-x;
     background-color: rgb(49, 47, 47);
     padding-block-end: 20%
-   
+}
+
+#bdy{
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-y repeat-x;
+    background-color: $primary-color1;
+    padding-block-end: 20%
 }
 
 #follow {
@@ -179,6 +204,81 @@ h2{
     background-color: lightgray;
     color: $primary-color1;
 }
+
+#results {
+    margin-top: 50px;    
+}
+
+#eventName{
+    width:250px;
+    @include display(inline-block);
+    height:22px;
+    margin-left:10%;
+}
+
+#city{
+    height:22px;
+}
+
+#links{
+    @include display(inline-block); 
+    margin-left:10%;
+    position: relative;
+}
+
+#eventsnearme{
+    margin-top:35%;
+}
+
+#twitter{
+    height:35px;
+}
+
+#insta{
+    height:35px;
+}
+
+#uberlink{
+    height:35px;
+}
+
+#lyftlink{
+    height:35px;
+}
+
+#submitbtn{
+    margin-left:9%;
+    background: $primary-color1;
+    color: $primary-color2;
+    border-radius:5px;
+}
+
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: $primary-color2;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    :hover {
+        background-color: #DDF;
+        color: $primary-color1;
+    }
+}
+
 
  @keyframes mymove {
     from {top: -150px;}

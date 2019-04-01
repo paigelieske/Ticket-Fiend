@@ -1,23 +1,31 @@
 table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
   width: 80%;
-  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+  color: black;
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-spacing: 25px;
 }
 
-td {
-  width: 20%;
-  padding: 0 5% 0 5%;
-  border: 1pt solid black;
-}
-
-td th {
+table td th {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
   border: 1px solid black;
   border-collapse: collapse;
   width: 25%;
+  font-weight: bolder;
+}
+
+table td th tr {
+  border: 1px solid black;
+  border-spacing: 15px;
+  background-color: #db9861;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
   text-align: center;
 }
 
@@ -29,7 +37,7 @@ tr :nth-child(even) {
 
 h2 {
   text-align: center;
-  color: #faf8f5;
+  color: black;
   text-shadow: 4px 4px 10px #252424;
   text-shadow: 4px 4px 10px #641b09;
   font-family: "Montserrat", sans-serif;
@@ -44,10 +52,8 @@ h2 {
   -webkit-box-shadow: 0px 10px 5px #111111;
           box-shadow: 0px 10px 5px #111111;
   margin: 0%;
-  /* text-align: center; */
   height: static;
   max-width: 100%;
-  /* position: absolute; */
 }
 
 .tableheaders {
@@ -86,7 +92,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 70%;
+  top: 60%;
 }
 
 .column {
@@ -94,11 +100,12 @@ h2 {
       -ms-flex: 33.33%;
           flex: 33.33%;
   padding: 45px;
+  text-align: center;
 }
 
 .column img {
+  max-width: 300px;
   height: 250px;
-  margin-left: 15%;
 }
 
 .imgtext {
@@ -117,17 +124,30 @@ h2 {
   border: lightgray 1px solid;
 }
 
+.datepicker {
+  display: inline-block;
+}
+
+.seatgeek {
+  width: 15%;
+}
+
 #text {
   -webkit-animation: mymove 1s;
           animation: mymove 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  position: relative;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   text-shadow: 4px 4px 10px #252424;
   font-family: serif;
   font-size: 150%;
+  margin-left: 12%;
+  display: inline-block;
+}
+
+#text img {
+  height: 35px;
 }
 
 #animantion img {
@@ -143,6 +163,15 @@ h2 {
   height: 100%;
   background-repeat: repeat-y repeat-x;
   background-color: #312f2f;
+  -webkit-padding-after: 20%;
+          padding-block-end: 20%;
+}
+
+#bdy {
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-y repeat-x;
+  background-color: black;
   -webkit-padding-after: 20%;
           padding-block-end: 20%;
 }
@@ -183,6 +212,78 @@ h2 {
   color: black;
 }
 
+#results {
+  margin-top: 50px;
+}
+
+#eventName {
+  width: 250px;
+  display: inline-block;
+  height: 22px;
+  margin-left: 10%;
+}
+
+#city {
+  height: 22px;
+}
+
+#links {
+  display: inline-block;
+  margin-left: 10%;
+  position: relative;
+}
+
+#eventsnearme {
+  margin-top: 35%;
+}
+
+#twitter {
+  height: 35px;
+}
+
+#insta {
+  height: 35px;
+}
+
+#uberlink {
+  height: 35px;
+}
+
+#lyftlink {
+  height: 35px;
+}
+
+#submitbtn {
+  margin-left: 9%;
+  background: black;
+  color: #dddddd;
+  border-radius: 5px;
+}
+
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: #dddddd;
+  color: #555;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+#back2Top :hover {
+  background-color: #DDF;
+  color: black;
+}
+
 @-webkit-keyframes mymove {
   from {
     top: -150px;
@@ -207,6 +308,7 @@ h2 {
         -ms-flex: 33.33%;
             flex: 33.33%;
     padding: 45px;
+    text-align: center;
   }
   .column img {
     height: 250px;
@@ -232,6 +334,7 @@ h2 {
         -ms-flex: 33.33%;
             flex: 33.33%;
     padding: 45px;
+    text-align: center;
   }
   .column img {
     height: 150px;
@@ -268,6 +371,7 @@ h2 {
         -ms-flex: 33.33%;
             flex: 33.33%;
     padding: 45px;
+    text-align: center;
   }
   .column img {
     height: 100px;
