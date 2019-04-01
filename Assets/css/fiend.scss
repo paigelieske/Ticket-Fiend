@@ -1,3 +1,16 @@
+$primary-color1: black;
+$primary-color2: #dddddd;
+$primary-color3: rgb(219, 152, 97);
+$shadow-color: #252424;
+$primary-font: 'Montserrat', sans-serif;
+@mixin display($property) {
+    display: $property;
+}
+@mixin col-display() {
+    flex: 33.33%;
+    padding: 45px;
+}
+
 table {
     // font-family: arial, sans-serif;
     // border-collapse: collapse;
@@ -18,12 +31,12 @@ table {
 td {
     width: 20%;
     padding: 0 5% 0 5%;
-    border: 1pt solid black;
+    border: 1pt solid $primary-color1;
     th {
-        border: 1px solid #dddddd;
+        border: 1px solid $primary-color2;
         text-align: left;
         padding: 8px;
-        border: 1px solid black;
+        border: 1px solid $primary-color1;
         border-collapse: collapse;
         width: 25%;
         text-align: center;
@@ -32,18 +45,18 @@ td {
 
 tr {
     :nth-child(even) {
-        background-color: #dddddd;
-        font-family: 'Montserrat', sans-serif;
-        background-color: rgb(219, 152, 97);
+        background-color: $primary-color2;
+        font-family: $primary-font;
+        background-color: $primary-color3;
       }
   }
 
 h2{
     text-align: center;
     color:rgb(250, 248, 245);
-    text-shadow: 4px 4px 10px #252424;
+    text-shadow: 4px 4px 10px $shadow-color;
     text-shadow: 4px 4px 10px #641b09;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primary-font;
 }
 
 .image {
@@ -61,14 +74,14 @@ h2{
  }
 
 .tableheaders {
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
+    background-color: $primary-color2;
+    font-family: $primary-font;
 }
 
 .firstrow {
-    background-color: rgb(219, 152, 97);
-    color: black;
-    font-family: 'Montserrat', sans-serif;
+    background-color: $primary-color3;
+    color: $primary-color1;
+    font-family: $primary-font;
 }
 
 .navbar {
@@ -81,13 +94,9 @@ h2{
     left:10px;
 }
  
-.typeofevent{
-    display: inline-block;    
- }
+.typeofevent{ @include display(inline-block); }  
 
-.date{
-    display: inline-block;
- }
+.date{ @include display(inline-block); }
 
 .row {
     display: flex;
@@ -95,8 +104,7 @@ h2{
   }
  
 .column {
-    flex: 33.33%;
-    padding: 45px;
+    @include col-display();
     img {
         height: 250px;
         margin-left: 15%;
@@ -108,7 +116,7 @@ h2{
     animation-timing-function: ease-out;
     position: relative;
     animation-fill-mode: forwards;
-    text-shadow: 4px 4px 10px #252424;
+    text-shadow: 4px 4px 10px $shadow-color;
     font-family: serif;
     font-size: 150%
  }
@@ -132,12 +140,12 @@ h2{
 }
 
 #follow {
-    color: white;
+    color: $primary-color2;
 }
  
 #typeofevent {
     width:250px;
-    display:inline-block;
+    @include display(inline-block);
 }
 
 #uberlink {
@@ -155,8 +163,7 @@ h2{
 
 @media only screen and (min-width: 1025px) {
     .column {
-        flex: 33.33%;
-        padding: 45px;
+        @include col-display();
         img {
             height: 250px;
             margin-left: 1%;
@@ -167,7 +174,7 @@ h2{
         animation-timing-function: ease-out;
         position: relative;
         animation-fill-mode: forwards;
-        text-shadow: 4px 4px 10px #252424;
+        text-shadow: 4px 4px 10px $shadow-color;
         font-family: serif;
         font-size: 150%
         margin-left 3%;
@@ -176,8 +183,7 @@ h2{
 
 @media only screen and (min-width: 768px) {
     .column {
-        flex: 33.33%;
-        padding: 45px;
+        @include col-display();
         img {
             height: 150px;
             margin-left: 1%;
@@ -191,7 +197,7 @@ h2{
     animation-timing-function: ease-out;
     position: relative;
     animation-fill-mode: forwards;
-    text-shadow: 4px 4px 10px #252424;
+    text-shadow: 4px 4px 10px $shadow-color;
     font-family: serif;
     font-size: 100%;
         img {
@@ -204,9 +210,8 @@ h2{
         position: absolute;
         top:50%;
       }
-      column {
-        flex: 33.33%;
-        padding: 25px;
+    .column {
+        @include col-display();
         img {
             height: 100px;
             margin-left: 1%;

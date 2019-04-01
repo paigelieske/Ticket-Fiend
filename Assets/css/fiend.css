@@ -23,7 +23,7 @@ td th {
 
 tr :nth-child(even) {
   background-color: #dddddd;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #db9861;
 }
 
@@ -32,7 +32,7 @@ h2 {
   color: #faf8f5;
   text-shadow: 4px 4px 10px #252424;
   text-shadow: 4px 4px 10px #641b09;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .image {
@@ -51,14 +51,14 @@ h2 {
 }
 
 .tableheaders {
-  background-color: white;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #dddddd;
+  font-family: "Montserrat", sans-serif;
 }
 
 .firstrow {
   background-color: #db9861;
   color: black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
@@ -132,7 +132,7 @@ h2 {
 }
 
 #follow {
-  color: white;
+  color: #dddddd;
 }
 
 #typeofevent {
@@ -228,13 +228,13 @@ h2 {
     position: absolute;
     top: 50%;
   }
-  column {
+  .column {
     -webkit-box-flex: 33.33%;
         -ms-flex: 33.33%;
             flex: 33.33%;
-    padding: 25px;
+    padding: 45px;
   }
-  column img {
+  .column img {
     height: 100px;
     margin-left: 1%;
   }
