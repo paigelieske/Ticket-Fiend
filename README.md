@@ -12,4 +12,4 @@ Some of the steps that we all took in creating this web application include:
 
 Some of the problems that we encountered include: trying to get the search parameters for the API to work properly so that they are not too specific or too general, trying to get the JavaScript to work properly with on click events triggered from the HTML, and the initial launch of the website did not work as intended. 
 
-Some of the future addition that we would like to add to this application include functioning ride applications (i.e. Uber, Lyft, etc.) that work when clicked, adding reviews 
+Some of the future addition that we would like to add to this application include functioning ride applications (i.e. Uber, Lyft, etc.) that work when clicked, adding reviews to various event, and recomendations based on search choices.  
