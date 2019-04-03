@@ -8,4 +8,8 @@ Some of the steps that we all took in creating this web application include:
 3. Then two of us started to go through the API documentation to see how to set up the URL that would be used to get the information needed for the application to work. Meanwhile, the other two members of the group started to work on the basic HTML and CSS for the basic UI for the application. 
 4. After the majority of the UI was completed, we began the challanging process of trying to integrate the webpage with the functionality of the JavaScript so that the application will work, all the while trying to not interfere with the overall UI.
 5. The last thing that we had to do before merging everything into the final branch was to do some minor compatability tweeks and to iron out any errors or incompatabilities that were present.
-6. The final step, launch the final product as a static website through Github
+6. The final step, launch the final product as a static website through Github.
+
+Some of the problems that we encountered include: trying to get the search parameters for the API to work properly so that they are not too specific or too general, trying to get the JavaScript to work properly with on click events triggered from the HTML, and the initial launch of the website did not work as intended. 
+
+Some of the future addition that we would like to add to this application include functioning ride applications (i.e. Uber, Lyft, etc.) that work when clicked, adding reviews 
