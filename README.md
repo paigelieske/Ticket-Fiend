@@ -6,4 +6,6 @@ Some of the steps that we all took in creating this web application include:
 1. Finding an API that would work properly and could be used to solve a viable problem.
 2. Once we found the API that we used for this web application, we began devlopment on the actual application itself by dividing the tasks of creating the UI, the JavaScript, the AJAX call, and the CSS animations among ourselves. 
 3. Then two of us started to go through the API documentation to see how to set up the URL that would be used to get the information needed for the application to work. Meanwhile, the other two members of the group started to work on the basic HTML and CSS for the basic UI for the application. 
-4. After the majority of the UI was completed, we began the challanging process of trying to integrate the webpage with the functionality of the JavaScript so that the application will work, all
+4. After the majority of the UI was completed, we began the challanging process of trying to integrate the webpage with the functionality of the JavaScript so that the application will work, all the while trying to not interfere with the overall UI.
+5. The last thing that we had to do before merging everything into the final branch was to do some minor compatability tweeks and to iron out any errors or incompatabilities that were present.
+6. The final step, launch the final product as a static website through Github
