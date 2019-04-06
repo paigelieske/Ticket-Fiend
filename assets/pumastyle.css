@@ -1,181 +1,232 @@
-.navbar{
-   left:10px;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-spacing: 25px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #db9861;
+  margin-top: 25px;
 }
-#text img{
-    height:35px;
+
+td th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 25%;
+  font-weight: bolder;
 }
-#eventName{
-    width:250px;
-   display: inline-block;
-   height:22px;
-   margin-left:10%;
+
+tr :nth-child(even) {
+  background-color: #dddddd;
+  font-family: "Montserrat", sans-serif;
+  background-color: #db9861;
 }
-.datepicker{
-   display: inline-block;
+
+h2 {
+  text-align: center;
+  color: black;
+  text-shadow: 4px 4px 10px #252424;
+  text-shadow: 4px 4px 10px #641b09;
+  font-family: "Montserrat", sans-serif;
 }
+
+.navbar {
+  left: 10px;
+}
+
+.datepicker {
+  display: inline-block;
+}
+
 .row {
-   display: flex;;
-   top:50%;
- }
- #city{
-     height:22px;
- }
- .column {
-   flex: 33.33%;
-   padding: 45px;
-   text-align:center;
- }
-.column img{
-    max-width:300px;
-    height:250px;
-    position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 50%;
 }
-#links{
-    margin-left:10%;
-    display:inline-block;
-    position: relative;
+
+.column {
+  -webkit-box-flex: 33.33%;
+      -ms-flex: 33.33%;
+          flex: 33.33%;
+  padding: 45px;
+  text-align: center;
 }
+
+.column img {
+  max-width: 300px;
+  height: 250px;
+  position: relative;
+}
+
 .image {
-    background-size: auto;
-    background-image: url("images/concert2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 2%;
-    box-shadow: 0px 10px 5px rgb(17, 17, 17);
-    margin:0%;
-    height: static;
-    max-width:100%;
- }
- #text {
-     animation: mymove 1s ;
-     animation-timing-function: ease-out;
-     position: relative;
-     animation-fill-mode: forwards;
-     text-shadow: 4px 4px 10px #252424;
-     font-family: serif;
-     font-size: 150%;
-     margin-left:12%;
-     display:inline-block;
- }
- .navbar {
-     animation: mymove 1s ;
-     animation-timing-function: ease-out;
-     position: relative;
-     animation-fill-mode: forwards;
-     padding: 20px;
-     overflow: hidden; 
- }
- @keyframes mymove {
-     from {top: -150px;}
-     to {top: 0px;}
-   } 
- #animation img {
-     display: none;;
- }
- #animation img:first-child {
-     display: none;
- }
- #Bdy{
-     width: 100%;
-     height: 100%;
-     background-repeat: repeat-y repeat-x;
-     background-color: black;
-     padding-block-end: 20%
- }
- #follow {
-     color: white;
- }
-   .firstrow {
-       background-color: rgb(235, 147, 76);
-       color: black;
-       font-family: 'Montserrat', sans-serif;
-   }
-   #eventsnearme{
-    margin-top:35%;
-   }
-   #twitter{
-    height:35px;
-    }
-    #insta{
-    height:35px;
-    }
-    #uberlink{
-    height:35px;
-    }
-    #lyftlink{
-    height:35px;
-    }
-    #submitbtn{
-        margin-left:9%;
-        background:black;
-        color:white;
-        border-radius:5px;
-    }
-      table {
-     font-family: arial, sans-serif;
-     border-collapse: collapse;
-     width: 100%;
-     color: black;
-     border: 2px solid black;
-     border-collapse: collapse;
-     border-spacing: 25px;
-     width:80%;
-     margin-left:auto;
-     margin-right:auto;
-     background-color:orange;
-     margin-top:25px;
-   }
-   
-   td, th {
-     border: 1px solid #dddddd;
-     text-align: left;
-     padding: 8px;
-     border: 1px solid black;
-     border-collapse: collapse;
-     width: 25%;
-     font-weight:bolder;
-   } 
-   
-    tr:nth-child(even) {
-     background-color: #dddddd;
-     font-family: 'Montserrat', sans-serif;
-     background-color: orange;
-   } 
- 
-    h2{
-       text-align: center;
-       color: black;
-       text-shadow: 4px 4px 10px #252424;
-       text-shadow: 4px 4px 10px #641b09;
-       font-family: 'Montserrat', sans-serif;
-      
-   }
- 
-   .tableheaders {
-       background-color: white;
-       font-family: 'Montserrat', sans-serif; 
-   }
-   .firstrow {
-       background-color: rgb(219, 152, 97);
-       color: black;
-       font-family: 'Montserrat', sans-serif;
-   } 
-
-   #instructions{
-       font-weight:bolder;
-       font-family:serif;
-       font-size: 35px;
-       text-align:center;
-   }
-   .imgtext{
-       position: relative;
-       top:-50px;
-       color:white;
-       font-size:40px;
-       font-weight: bolder;
-   }
-
-.seatgeek{
-    width:15%;
-    margin-left:40%;
+  background-size: auto;
+  background-image: url("images/concert2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2%;
+  -webkit-box-shadow: 0px 10px 5px #111111;
+          box-shadow: 0px 10px 5px #111111;
+  margin: 0%;
+  height: static;
+  max-width: 100%;
 }
+
+.navbar {
+  -webkit-animation: mymove 1s;
+          animation: mymove 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  position: relative;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.firstrow {
+  background-color: #db9861;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tableheaders {
+  background-color: #dddddd;
+  font-family: "Montserrat", sans-serif;
+}
+
+.firstrow {
+  background-color: #db9861;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.imgtext {
+  position: relative;
+  top: -50px;
+  color: #dddddd;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.seatgeek {
+  width: 15%;
+  margin-left: 40%;
+}
+
+#text img {
+  height: 35px;
+}
+
+#eventName {
+  display: inline-block;
+  width: 250px;
+  height: 22px;
+  margin-left: 10%;
+}
+
+#city {
+  height: 22px;
+}
+
+#links {
+  display: inline-block;
+  margin-left: 10%;
+  position: relative;
+}
+
+#text {
+  -webkit-animation: mymove 1s;
+          animation: mymove 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  position: relative;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  text-shadow: 4px 4px 10px #252424;
+  font-family: serif;
+  font-size: 150%;
+  margin-left: 12%;
+  display: inline-block;
+}
+
+#animation img {
+  display: none;
+}
+
+#animation img :first-child {
+  display: none;
+}
+
+#Bdy {
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-y repeat-x;
+  background-color: black;
+  -webkit-padding-after: 20%;
+          padding-block-end: 20%;
+}
+
+#follow {
+  color: #dddddd;
+}
+
+#eventsnearme {
+  margin-top: 35%;
+}
+
+#twitter {
+  height: 35px;
+}
+
+#insta {
+  height: 35px;
+}
+
+#uberlink {
+  height: 35px;
+}
+
+#lyftlink {
+  height: 35px;
+}
+
+#submitbtn {
+  margin-left: 9%;
+  background: black;
+  color: #dddddd;
+  border-radius: 5px;
+}
+
+#instructions {
+  font-weight: bolder;
+  font-family: serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    top: -150px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes mymove {
+  from {
+    top: -150px;
+  }
+  to {
+    top: 0px;
+  }
+}
+/*# sourceMappingURL=pumastyle.css.map */
